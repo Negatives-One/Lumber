@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389323873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.313145, y: 12.593983, z: 0.028916355}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -407,7 +407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapSize: {x: 100, y: 100}
-  grassPerAxis: {x: 0, y: 0}
   grassObject: {fileID: 5683765887668086223, guid: 2757501d64008d24fae8d8560a375cda,
     type: 3}
 --- !u!4 &1113638206
