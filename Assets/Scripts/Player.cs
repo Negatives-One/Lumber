@@ -21,7 +21,7 @@ public class Player : MonoBehaviour {
 
 	void baterUma()
     {
-		if (Input.GetKey("KeyCode.Mouse0"))
+		if (Input.GetKey("space"))
         {
 			arvore.vida = arvore.vida -1;
         }
