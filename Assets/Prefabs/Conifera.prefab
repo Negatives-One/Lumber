@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 5129591804226023542}
   - component: {fileID: 972910098215091091}
   - component: {fileID: 6375145440405564622}
+  - component: {fileID: 4165528551432785818}
   m_Layer: 0
   m_Name: Conifera
   m_TagString: Untagged
@@ -215,6 +216,7 @@ MonoBehaviour:
   madeira: 3
   vida: 3
   inventario: {fileID: 0}
+  player: {fileID: 0}
 --- !u!135 &6375145440405564622
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -228,6 +230,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &4165528551432785818
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5504568891022895820}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6298169950943067279
 GameObject:
   m_ObjectHideFlags: 0

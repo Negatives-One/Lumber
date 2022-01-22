@@ -9,7 +9,9 @@ public class Mapa : MonoBehaviour
     [SerializeField] public GameObject grassObject;
     [SerializeField] public List<GameObject> grasses = new List<GameObject>();
 
-    [SerializeField] private List<GameObject> arvores = new List<GameObject>();
+    [SerializeField] public List<GameObject> arvores = new List<GameObject>();
+    [SerializeField] public GameObject toco;
+    [SerializeField] private Player player;
 
     void Start()
     {
@@ -30,7 +32,8 @@ public class Mapa : MonoBehaviour
 
         for(int i = 0; i < grasses.Count; i++)
         {
-            Instantiate(arvores[Random.Range(0, 2)], grasses[i].transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
+            GameObject a = Instantiate(arvores[Random.Range(0, 2)], grasses[i].transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
+            a.GetComponent<Arvore>().player = player;
         }
     }
 

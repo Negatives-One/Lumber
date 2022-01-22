@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4711896455331970217}
+  - component: {fileID: 57004401346320589}
   m_Layer: 0
   m_Name: TocoCone
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &57004401346320589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5345724860696602131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bb3b4d169263747ab13f826b6f2854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempo: 2
 --- !u!1 &6604168837257173985
 GameObject:
   m_ObjectHideFlags: 0
