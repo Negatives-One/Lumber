@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vendas : MonoBehaviour
+public class Vendas : Interagivel
 {
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public override void onCloseDistance() {
+        if(Input.GetKeyDown(KeyCode.V)) {
+            Debug.Log("Vendas");
+        }
     }
 }
