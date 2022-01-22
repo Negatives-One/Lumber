@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mapa : MonoBehaviour
 {
     [SerializeField] public Vector2Int mapSize;
-    [SerializeField] public Vector2Int grassPerAxis;
+    private Vector2Int grassPerAxis;
     [SerializeField] public GameObject grassObject;
     void Start()
     {
