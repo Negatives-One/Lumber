@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+ 
+
+
 public class Arvore : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public int madeira=3;
+    public int vida=3;
+    public Inventario inventario;
+   
+
+    void ArvDerrubada() { 
+ 
+        {
+            inventario.QtdMadeira = inventario.QtdMadeira + madeira;
+   
+        }
+
+
+
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
