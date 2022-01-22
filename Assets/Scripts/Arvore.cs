@@ -10,6 +10,7 @@ public class Arvore : MonoBehaviour
     public int madeira=3;
     public int vida=3;
     public Inventario inventario;
+    public Player player;
    
 
     void ArvDerrubada() { 
@@ -24,4 +25,20 @@ public class Arvore : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject == player.gameObject)
+        {
+            player.arvore = this; 
+
+        } 
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject== player.gameObject)
+        {
+            player.arvore = null;
+        }
+        
+    }
 }

@@ -333,6 +333,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1421869025640484566}
+  - component: {fileID: 5018081024700778380}
+  - component: {fileID: 2142506912572748565}
   m_Layer: 0
   m_Name: Blob
   m_TagString: Untagged
@@ -360,6 +362,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5018081024700778380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797128618424325228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3dfc841cf205744d9d40b44eb3be41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  madeira: 3
+  vida: 3
+  inventario: {fileID: 0}
+--- !u!135 &2142506912572748565
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797128618424325228}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3016060591921754212
 GameObject:
   m_ObjectHideFlags: 0
