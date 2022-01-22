@@ -33,7 +33,7 @@ public class Mapa : MonoBehaviour
 
         for(int i = 0; i < grasses.Count; i++)
         {
-            GameObject a = Instantiate(arvores[Random.Range(0, 2)], grasses[i].transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
+            GameObject a = Instantiate(arvores[Random.Range(0, 3)], grasses[i].transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
             a.GetComponent<Arvore>().player = player;
         }
     }
