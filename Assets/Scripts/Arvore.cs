@@ -18,7 +18,7 @@ public class Arvore : MonoBehaviour
 
     public void ArvDerrubada()
     {
-        inventario.QtdMadeira = inventario.QtdMadeira + madeira;
+        inventario.qtdMadeira = inventario.qtdMadeira + madeira;
         Mapa a = GameObject.Find("Mapa").GetComponent<Mapa>();
         Instantiate(a.toco, transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
         Destroy(gameObject);
