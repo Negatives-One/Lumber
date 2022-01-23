@@ -8,7 +8,7 @@ public class Inventario : MonoBehaviour
     public TMP_Text UIText;
 
     public int qtdDinheiro = 0;
-    public int qtdMadeira = 5;
+    public int qtdMadeira = 0;
 
     private void Update()
     {
