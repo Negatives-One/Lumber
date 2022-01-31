@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
         {
             if(arvore != null)
             {
-                arvore.vida = arvore.vida - 1;
+                arvore.vida = arvore.vida - force;
                 if (arvore.vida < 1)
                 {
                     arvore.ArvDerrubada();

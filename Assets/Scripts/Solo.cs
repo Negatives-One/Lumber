@@ -2,17 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Solo : MonoBehaviour
+public abstract class Solo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Mapa mapa;
+    public Arvore arvore;
+    public Mapa.Cor currentCor;
 }

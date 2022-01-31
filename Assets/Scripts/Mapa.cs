@@ -12,7 +12,12 @@ public class Mapa : MonoBehaviour
 
     [SerializeField] public List<GameObject> arvores = new List<GameObject>();
     [SerializeField] public GameObject toco;
-    [SerializeField] private Player player;
+    [SerializeField] public Player player;
+
+    public enum Cor { Normal, Amarelo, Neve };
+
+    public List<Material> grassTypes;
+    public List<Material> groundTypes;
 
     void Start()
     {
@@ -25,17 +30,36 @@ public class Mapa : MonoBehaviour
                 GameObject grass = Instantiate(grassObject, GameObject.Find("Grasses").transform);
                 grasses.Add(grass);
                 grass.transform.position = pointer;
+
+                switch((Cor)Random.Range(0, 3))
+                {
+                    case (Cor.Normal):
+                        SoloNormal solo = grass.AddComponent(typeof(SoloNormal)) as SoloNormal;
+                        solo.currentCor = Cor.Normal;
+                        solo.mapa = this;
+                        break;
+                    case (Cor.Amarelo):
+                        SoloAmarelo soloA = grass.AddComponent(typeof(SoloAmarelo)) as SoloAmarelo;
+                        soloA.currentCor = Cor.Amarelo;
+                        soloA.mapa = this;
+                        break;
+                    case (Cor.Neve):
+                        SoloNeve soloN = grass.AddComponent(typeof(SoloNeve)) as SoloNeve;
+                        soloN.currentCor = Cor.Neve;
+                        soloN.mapa = this;
+                        break;
+                }
                 pointer += Vector3.back * -20;
             }
             pointer = new Vector3(pointer.x, 0f, -mapSize.y / 2f + 10f);
             pointer += Vector3.right * 20;
         }
 
-        for(int i = 0; i < grasses.Count; i++)
-        {
-            GameObject a = Instantiate(arvores[Random.Range(0, 3)], grasses[i].transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
-            a.GetComponent<Arvore>().player = player;
-        }
+        //for(int i = 0; i < grasses.Count; i++)
+        //{
+        //    GameObject a = Instantiate(arvores[Random.Range(0, 3)], grasses[i].transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
+        //    a.GetComponent<Arvore>().player = player;
+        //}
     }
 
     void OnDrawGizmos()

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Toco : MonoBehaviour
 {
     public float tempo = 2f;
+    public Solo solo;
     void Start()
     {
         StartCoroutine(Timer());
@@ -19,7 +20,8 @@ public class Toco : MonoBehaviour
             yield return null;
         }
         Mapa a = GameObject.Find("Mapa").GetComponent<Mapa>();
-        Instantiate(a.arvores[Random.Range(0, 2)], transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
+        GameObject arvre = Instantiate(a.arvores[(int)solo.currentCor], transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
+        arvre.GetComponent<Arvore>().solo = solo;
         Destroy(gameObject);
     }
 }

@@ -1270,6 +1270,14 @@ MonoBehaviour:
   - {fileID: 611116249897521880, guid: b70cc8df737173640922e49d3df204a3, type: 3}
   toco: {fileID: 5345724860696602131, guid: 858240ed128043c4b9d996c13bbace25, type: 3}
   player: {fileID: 1219193948}
+  grassTypes:
+  - {fileID: 2100000, guid: 1b4ad8ca7712a3848b0c3e887f3568b0, type: 2}
+  - {fileID: 2100000, guid: f1c01dfb88c026c46b37186cf9ad98ba, type: 2}
+  - {fileID: 2100000, guid: c6aa25f91a989154ea3a192bf189cc49, type: 2}
+  groundTypes:
+  - {fileID: 2100000, guid: 6c33f10a3cfeda74b9d8db4a76e4f478, type: 2}
+  - {fileID: 2100000, guid: fa82f68aa971c6541bb6fd7674e2f2ad, type: 2}
+  - {fileID: 2100000, guid: 8a081da561fd67b4c99cfb7bdd506dd0, type: 2}
 --- !u!4 &1113638206
 Transform:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class Arvore : MonoBehaviour
     public Inventario inventario;
     public Player player;
 
+    public Solo solo;
+
 
     private void Start()
     {
@@ -20,7 +22,8 @@ public class Arvore : MonoBehaviour
     {
         inventario.qtdMadeira = inventario.qtdMadeira + madeira;
         Mapa a = GameObject.Find("Mapa").GetComponent<Mapa>();
-        Instantiate(a.toco, transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
+        GameObject t = Instantiate(a.toco, transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
+        t.GetComponent<Toco>().solo = solo;
         Destroy(gameObject);
     }
 
