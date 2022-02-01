@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Upgrades : Interagivel
 {
-    public Inventario inventario;
-
-    void Start()
+    public override void onCloseDistance()
     {
-        
-    }
-
-    public override void onCloseDistance() {
-        if(Input.GetKeyDown(KeyCode.U) &&  inventario.qtdDinheiro >= 20) {
+        if (Input.GetKeyDown(KeyCode.U) && inventario.qtdDinheiro >= 20)
+        {
             inventario.qtdDinheiro -= 20;
             player.force += 1;
             Debug.Log(player.force);

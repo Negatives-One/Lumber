@@ -29,6 +29,11 @@ public class Arvore : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public static void UpdateArvoreHealth()
+    {
+        vidaMax += 1;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player.gameObject)

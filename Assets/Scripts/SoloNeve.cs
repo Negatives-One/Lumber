@@ -14,9 +14,4 @@ public class SoloNeve : Solo
         materials[1] = mapa.grassTypes[(int)currentCor];
         GetComponent<MeshRenderer>().materials = materials;
     }
-
-    void Update()
-    {
-
-    }
 }

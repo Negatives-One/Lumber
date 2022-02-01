@@ -21,9 +21,9 @@ public class Mapa : MonoBehaviour
 
     void Start()
     {
-        grassPerAxis = new Vector2Int(mapSize.x/20, mapSize.y/20);
+        grassPerAxis = new Vector2Int(mapSize.x / 20, mapSize.y / 20);
         Vector3 pointer = new Vector3(-mapSize.x / 2f + 10f, 0f, -mapSize.y / 2f + 10f);
-        for(int x = 0; x < grassPerAxis.x; x++)
+        for (int x = 0; x < grassPerAxis.x; x++)
         {
             for (int y = 0; y < grassPerAxis.y; y++)
             {
@@ -31,7 +31,7 @@ public class Mapa : MonoBehaviour
                 grasses.Add(grass);
                 grass.transform.position = pointer;
 
-                switch((Cor)Random.Range(0, 3))
+                switch ((Cor)Random.Range(0, 3))
                 {
                     case (Cor.Normal):
                         SoloNormal solo = grass.AddComponent(typeof(SoloNormal)) as SoloNormal;
@@ -55,7 +55,7 @@ public class Mapa : MonoBehaviour
             pointer += Vector3.right * 20;
         }
 
-        StartCoroutine(AumentarVidaMaxArvores(10f));
+        Coroutine a = StartCoroutine(AumentarVidaMaxArvores(7f));
 
         //for(int i = 0; i < grasses.Count; i++)
         //{
@@ -64,7 +64,7 @@ public class Mapa : MonoBehaviour
         //}
     }
 
-    static public IEnumerator AumentarVidaMaxArvores(float duration)
+    public IEnumerator AumentarVidaMaxArvores(float duration)
     {
         float normalizedTime = 0;
         while (normalizedTime <= 1f)
@@ -73,8 +73,8 @@ public class Mapa : MonoBehaviour
 
             yield return null;
         }
-        Arvore.vidaMax += 1;
-        StartCoroutine(AumentarVidaMaxArvores(10f));
+        Arvore.UpdateArvoreHealth();
+        StartCoroutine(AumentarVidaMaxArvores(7f));
     }
 
     void OnDrawGizmos()
