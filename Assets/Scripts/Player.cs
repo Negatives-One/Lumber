@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
 
-        if (arvore !=null)
+        if (arvore != null)
         {
             textLumber.SetActive(true);
         }
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
         }
 
         baterUma();
-        life= DeathRate(life);
+        life = DeathRate(life);
 
     }
 
@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(arvore != null)
+            if (arvore != null)
             {
                 arvore.vida = arvore.vida - force;
                 if (arvore.vida < 1)
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-    }  float DeathRate(float playerLife)
+    } float DeathRate(float playerLife)
     {
 
         if (playerLife > 0)
@@ -102,9 +102,13 @@ public class Player : MonoBehaviour
         if (playerLife <= 0)
         {
             textLoseScreen.SetActive(true);
-            
+
         }
         return playerLife;
-        
+
+    }
+    public  void UpdateDamageRate()
+    {
+        damageRate += 1;
     }
 }

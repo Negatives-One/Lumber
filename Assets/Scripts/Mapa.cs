@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Mapa : MonoBehaviour
@@ -13,6 +14,7 @@ public class Mapa : MonoBehaviour
     [SerializeField] public List<GameObject> arvores = new List<GameObject>();
     [SerializeField] public GameObject toco;
     [SerializeField] public Player player;
+    public float damageTimerRate=0f;
 
     public enum Cor { Normal, Amarelo, Neve };
 
@@ -55,13 +57,23 @@ public class Mapa : MonoBehaviour
             pointer += Vector3.right * 20;
         }
 
-        Coroutine a = StartCoroutine(AumentarVidaMaxArvores(7f));
+        Coroutine a = StartCoroutine(AumentarVidaMaxArvores(damageTimerRate));
 
         //for(int i = 0; i < grasses.Count; i++)
         //{
         //    GameObject a = Instantiate(arvores[Random.Range(0, 3)], grasses[i].transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
         //    a.GetComponent<Arvore>().player = player;
         //}
+    }
+
+    private void Update()
+    {
+        if (player.life <= 0f && Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene(0);
+            Arvore.vidaMax = 3;
+        }
+
     }
 
     public IEnumerator AumentarVidaMaxArvores(float duration)
@@ -74,11 +86,15 @@ public class Mapa : MonoBehaviour
             yield return null;
         }
         Arvore.UpdateArvoreHealth();
-        StartCoroutine(AumentarVidaMaxArvores(7f));
+        player.UpdateDamageRate();
+        StartCoroutine(AumentarVidaMaxArvores(damageTimerRate));
     }
-
+  
     void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(mapSize.x, 1, mapSize.y));
     }
+
+
+    
 }
