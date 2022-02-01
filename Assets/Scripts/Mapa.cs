@@ -55,11 +55,26 @@ public class Mapa : MonoBehaviour
             pointer += Vector3.right * 20;
         }
 
+        StartCoroutine(AumentarVidaMaxArvores(10f));
+
         //for(int i = 0; i < grasses.Count; i++)
         //{
         //    GameObject a = Instantiate(arvores[Random.Range(0, 3)], grasses[i].transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
         //    a.GetComponent<Arvore>().player = player;
         //}
+    }
+
+    static public IEnumerator AumentarVidaMaxArvores(float duration)
+    {
+        float normalizedTime = 0;
+        while (normalizedTime <= 1f)
+        {
+            normalizedTime += Time.deltaTime / duration;
+
+            yield return null;
+        }
+        Arvore.vidaMax += 1;
+        StartCoroutine(AumentarVidaMaxArvores(10f));
     }
 
     void OnDrawGizmos()
