@@ -5,7 +5,8 @@ using UnityEngine;
 public class Arvore : MonoBehaviour
 {
     public int madeira = 3;
-    public int vida = 3;
+    public int vida;
+    static public int vidaMax = 3;
     public Inventario inventario;
     public Player player;
 
@@ -14,6 +15,7 @@ public class Arvore : MonoBehaviour
 
     private void Start()
     {
+        vida = vidaMax;
         player = GameObject.Find("Capsule").GetComponent<Player>();
         inventario = player.gameObject.GetComponent<Inventario>();
     }
