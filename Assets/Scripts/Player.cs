@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    public GameObject textLumber;
     public float movementSpeed = 10;
     public float turningSpeed = 60;
     public int force = 1;
@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
+    public float life = 100f;
+    public float maxLife = 100f;
+    public GameObject textLoseScreen;
+    public float damageRate = 10f;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
@@ -60,7 +64,18 @@ public class Player : MonoBehaviour
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
 
+        if (arvore !=null)
+        {
+            textLumber.SetActive(true);
+        }
+        else
+        {
+            textLumber.SetActive(false);
+        }
+
         baterUma();
+        life= DeathRate(life);
+
     }
 
     void baterUma()
@@ -76,5 +91,20 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }  float DeathRate(float playerLife)
+    {
+
+        if (playerLife > 0)
+        {
+            playerLife = playerLife - damageRate * Time.deltaTime;
+        }
+
+        if (playerLife <= 0)
+        {
+            textLoseScreen.SetActive(true);
+            
+        }
+        return playerLife;
+        
     }
 }
