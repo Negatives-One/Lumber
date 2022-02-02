@@ -32,6 +32,7 @@ public class Arvore : MonoBehaviour
     public static void UpdateArvoreHealth()
     {
         vidaMax += 1;
+
     }
 
     private void OnTriggerEnter(Collider other)
