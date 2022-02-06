@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Interagivel : MonoBehaviour
 {
-    public Player player;
+    protected Player player;
     [SerializeField] protected Inventario inventario;
     void Start()
     {
@@ -14,14 +14,18 @@ public abstract class Interagivel : MonoBehaviour
 
     void Update()
     {
+        CheckDistance();
+    }
+    protected void CheckDistance()
+    {
         float distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
         if (distance < 3.5f)
         {
-            onCloseDistance();
+            OnCloseDistance();
         }
     }
 
-    public virtual void onCloseDistance()
+    public virtual void OnCloseDistance()
     {
     }
 

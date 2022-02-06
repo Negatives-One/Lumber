@@ -7,4 +7,9 @@ public abstract class Solo : MonoBehaviour
     public Mapa mapa;
     public Arvore arvore;
     public Mapa.Cor currentCor;
+
+    protected virtual void StartSolo()
+    { 
+
+    }
 }

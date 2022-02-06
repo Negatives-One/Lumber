@@ -12,7 +12,12 @@ public class Inventario : MonoBehaviour
 
     private void Update()
     {
-        if(UIText)
+        UpdateText();
+    }
+
+    private void UpdateText()
+    {
+        if (UIText)
         {
             UIText.SetText("Dinheiro: " + qtdDinheiro.ToString() + "\nMadeira: " + qtdMadeira.ToString());
         }

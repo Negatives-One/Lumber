@@ -1295,7 +1295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5439eb45b961d4da0911d7835d4eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1219193948}
   inventario: {fileID: 1219193954}
   panel: {fileID: 2075506898}
 --- !u!1 &963194225
@@ -1462,7 +1461,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266a46180fbcdec4bbbfcd0e02a8d4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1219193948}
   inventario: {fileID: 1219193954}
 --- !u!65 &1088180429
 BoxCollider:
@@ -1661,7 +1659,6 @@ MonoBehaviour:
   - {fileID: 611116249897521880, guid: b70cc8df737173640922e49d3df204a3, type: 3}
   toco: {fileID: 5345724860696602131, guid: 858240ed128043c4b9d996c13bbace25, type: 3}
   player: {fileID: 1219193948}
-  damageTimerRate: 25
   grassTypes:
   - {fileID: 2100000, guid: 1b4ad8ca7712a3848b0c3e887f3568b0, type: 2}
   - {fileID: 2100000, guid: f1c01dfb88c026c46b37186cf9ad98ba, type: 2}
@@ -2585,7 +2582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Clique para Bater :3
+  m_text: Clique para Derrubar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

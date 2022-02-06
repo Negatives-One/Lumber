@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Upgrades : Interagivel
 {
-    public GameObject panel;
-    public override void onCloseDistance()
+    [SerializeField] private GameObject panel;
+    public override void OnCloseDistance()
     {
         if (Input.GetKeyDown(KeyCode.U))
         {

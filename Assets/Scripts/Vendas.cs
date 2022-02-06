@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Vendas : Interagivel
 {
-    public override void onCloseDistance()
+    public override void OnCloseDistance()
     {
         if (Input.GetKeyDown(KeyCode.V) && inventario.qtdMadeira > 0)
         {

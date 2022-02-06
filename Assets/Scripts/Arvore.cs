@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Arvore : MonoBehaviour
 {
-    public int madeira = 3;
+    private int madeira = 3;
     public int vida;
     static public int vidaMax = 3;
     public Inventario inventario;

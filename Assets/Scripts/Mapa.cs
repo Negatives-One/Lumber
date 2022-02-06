@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class Mapa : MonoBehaviour
 {
-    [SerializeField] public Vector2Int mapSize;
+    [SerializeField] private Vector2Int mapSize;
     private Vector2Int grassPerAxis;
-    [SerializeField] public GameObject grassObject;
+    [SerializeField] private GameObject grassObject;
     [SerializeField] public List<GameObject> grasses = new List<GameObject>();
 
     [SerializeField] public List<GameObject> arvores = new List<GameObject>();
     [SerializeField] public GameObject toco;
     [SerializeField] public Player player;
-    public float damageTimerRate=0f;
+    private float damageTimerRate=0f;
 
     public enum Cor { Normal, Amarelo, Neve };
 
@@ -22,6 +22,19 @@ public class Mapa : MonoBehaviour
     public List<Material> groundTypes;
 
     void Start()
+    {
+        GenerateMap();
+
+        Coroutine a = StartCoroutine(AumentarVidaMaxArvores(damageTimerRate));
+
+        //for(int i = 0; i < grasses.Count; i++)
+        //{
+        //    GameObject a = Instantiate(arvores[Random.Range(0, 3)], grasses[i].transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
+        //    a.GetComponent<Arvore>().player = player;
+        //}
+    }
+
+    private void GenerateMap()
     {
         grassPerAxis = new Vector2Int(mapSize.x / 20, mapSize.y / 20);
         Vector3 pointer = new Vector3(-mapSize.x / 2f + 10f, 0f, -mapSize.y / 2f + 10f);
@@ -56,14 +69,6 @@ public class Mapa : MonoBehaviour
             pointer = new Vector3(pointer.x, 0f, -mapSize.y / 2f + 10f);
             pointer += Vector3.right * 20;
         }
-
-        Coroutine a = StartCoroutine(AumentarVidaMaxArvores(damageTimerRate));
-
-        //for(int i = 0; i < grasses.Count; i++)
-        //{
-        //    GameObject a = Instantiate(arvores[Random.Range(0, 3)], grasses[i].transform.position, Quaternion.identity, GameObject.Find("Arvores").transform);
-        //    a.GetComponent<Arvore>().player = player;
-        //}
     }
 
     private void Update()
