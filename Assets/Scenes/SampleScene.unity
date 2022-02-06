@@ -1970,13 +1970,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLumber: {fileID: 1491768350}
-  movementSpeed: 10
-  turningSpeed: 60
   force: 1
   arvore: {fileID: 0}
-  speed: 10
-  jumpSpeed: 8
-  gravity: 20
   playerCameraParent: {fileID: 963194228}
   lookSpeed: 2
   lookXLimit: 60
