@@ -5,8 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GameObject textLumber;
-    public float movementSpeed = 10;
-    public float turningSpeed = 60;
     public int force = 1;
     public Arvore arvore;
 
@@ -78,7 +76,7 @@ public class Player : MonoBehaviour
 
     }
 
-    void baterUma()
+    private void baterUma()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -91,7 +89,9 @@ public class Player : MonoBehaviour
                 }
             }
         }
-    } float DeathRate(float playerLife)
+    }
+
+    private float DeathRate(float playerLife)
     {
 
         if (playerLife > 0)
@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
         return playerLife;
 
     }
-    public  void UpdateDamageRate()
+    public void UpdateDamageRate()
     {
         damageRate += 1;
     }

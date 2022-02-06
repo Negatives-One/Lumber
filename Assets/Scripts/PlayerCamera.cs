@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SC_CameraCollision : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
     public Transform referenceTransform;
     public float collisionOffset = 0.3f;

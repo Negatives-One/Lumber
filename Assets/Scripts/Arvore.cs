@@ -20,7 +20,7 @@ public class Arvore : MonoBehaviour
         inventario = player.gameObject.GetComponent<Inventario>();
     }
 
-    public void ArvDerrubada()
+    public void ArvDerrubada() 
     {
         inventario.qtdMadeira = inventario.qtdMadeira + madeira;
         Mapa a = GameObject.Find("Mapa").GetComponent<Mapa>();

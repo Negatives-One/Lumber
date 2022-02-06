@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Toco : MonoBehaviour
 {
-    public float tempo = 2f;
+    private float tempo = 2f;
     public Solo solo;
     void Start()
     {

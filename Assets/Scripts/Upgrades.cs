@@ -9,7 +9,7 @@ public class Upgrades : Interagivel
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
-            Camera.main.GetComponent<SC_CameraCollision>().LockMouse(false);
+            Camera.main.GetComponent<PlayerCamera>().LockMouse(false);
             panel.SetActive(true);
         }
     }
