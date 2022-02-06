@@ -25,7 +25,7 @@ public class Mapa : MonoBehaviour
     {
         GenerateMap();
 
-        Coroutine a = StartCoroutine(AumentarVidaMaxArvores(damageTimerRate));
+        Coroutine a = StartCoroutine(AumentarDificuldade(damageTimerRate));
 
         //for(int i = 0; i < grasses.Count; i++)
         //{
@@ -81,7 +81,7 @@ public class Mapa : MonoBehaviour
 
     }
 
-    public IEnumerator AumentarVidaMaxArvores(float duration)
+    public IEnumerator AumentarDificuldade(float duration)
     {
         float normalizedTime = 0;
         while (normalizedTime <= 1f)
@@ -92,7 +92,7 @@ public class Mapa : MonoBehaviour
         }
         Arvore.UpdateArvoreHealth();
         player.UpdateDamageRate();
-        StartCoroutine(AumentarVidaMaxArvores(damageTimerRate));
+        StartCoroutine(AumentarDificuldade(damageTimerRate));
     }
   
     void OnDrawGizmos()
