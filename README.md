@@ -9,6 +9,10 @@ Ele é construído em C# na plataforma Unity (versão 2020.3.20f1).
 - Raimundo Thales Ayala;
 - Rafaella Sampaio de Alencar.
 
+## *Links* úteis
+[UML no Miro](https://miro.com/app/board/uXjVOPH1Q-A=/?invite_link_id=185251299795)  
+[Executável do jogo e .jpg da UML](https://drive.google.com/drive/folders/1pTBSIVw45fj7g3x4FjyHwwFgf_tbcrMA?usp=sharing)
+
 ## Como jogar
 ![initial](https://user-images.githubusercontent.com/46501003/152696234-734aaf0c-4e3d-4b08-b283-e0c7c437b295.jpg)  
 Controle do movimento do jogador com as teclas WASD.  
