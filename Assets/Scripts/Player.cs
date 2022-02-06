@@ -9,9 +9,9 @@ public class Player : MonoBehaviour
     public Arvore arvore;
 
 
-    public float speed = 7.5f;
-    public float jumpSpeed = 8.0f;
-    public float gravity = 20.0f;
+    private float speed = 7.5f;
+    private float jumpSpeed = 8.0f;
+    private float gravity = 20.0f;
     public Transform playerCameraParent;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 60.0f;
@@ -71,12 +71,12 @@ public class Player : MonoBehaviour
             textLumber.SetActive(false);
         }
 
-        baterUma();
+        ChopTree();
         life = DeathRate(life);
 
     }
 
-    private void baterUma()
+    private void ChopTree()
     {
         if (Input.GetMouseButtonDown(0))
         {
