@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028311, g: 0.22571468, b: 0.30692238, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028337, g: 0.22571489, b: 0.30692315, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1659,6 +1659,7 @@ MonoBehaviour:
   - {fileID: 611116249897521880, guid: b70cc8df737173640922e49d3df204a3, type: 3}
   toco: {fileID: 5345724860696602131, guid: 858240ed128043c4b9d996c13bbace25, type: 3}
   player: {fileID: 1219193948}
+  damageTimerRate: 25
   grassTypes:
   - {fileID: 2100000, guid: 1b4ad8ca7712a3848b0c3e887f3568b0, type: 2}
   - {fileID: 2100000, guid: f1c01dfb88c026c46b37186cf9ad98ba, type: 2}
@@ -1970,20 +1971,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLumber: {fileID: 1491768350}
-  movementSpeed: 10
-  turningSpeed: 60
   force: 1
   arvore: {fileID: 0}
-  speed: 10
-  jumpSpeed: 8
-  gravity: 20
   playerCameraParent: {fileID: 963194228}
   lookSpeed: 2
   lookXLimit: 60
   life: 100
   maxLife: 100
   textLoseScreen: {fileID: 1433390876}
-  damageRate: 1
+  damageRate: 0.5
   canMove: 1
 --- !u!136 &1219193949
 CapsuleCollider:

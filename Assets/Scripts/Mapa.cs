@@ -14,7 +14,7 @@ public class Mapa : MonoBehaviour
     [SerializeField] public List<GameObject> arvores = new List<GameObject>();
     [SerializeField] public GameObject toco;
     [SerializeField] public Player player;
-    private float damageTimerRate = 8f;
+    [SerializeField]private float damageTimerRate = 8f;
 
     public enum Cor { Normal, Amarelo, Neve };
 
