@@ -2,7 +2,7 @@
 
 ## Sobre
 Este projeto é um jogo construído para a disciplina de Programação Orientada a Objetos, ministrada pelo professor Gilvan Rodrigues (UFC) em 2021.2.  
-Ele construído em C# na plataforma Unity (versão 2020.3.20f1).
+Ele é construído em C# na plataforma Unity (versão 2020.3.20f1).
 
 ## Equipe
 - Bruno Carvalho Lima;
